@@ -10,7 +10,7 @@ function Tingle(){
         <div className="Tingle">
             <div className="tingleWrap">
                 <TingleBox text ={'안녕하세요'}></TingleBox>
-                <TingleBox></TingleBox>
+                {/* <TingleBox></TingleBox> */}
             </div>
         </div>
     )
