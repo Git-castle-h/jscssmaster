@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './css/reset.css';
 import './css/style.css';
 import './css/main.css';
 import './css/textfilup.css';

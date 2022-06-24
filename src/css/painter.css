@@ -1,1 +1,59 @@
-/*# sourceMappingURL=painter.css.map */
+.Painter {
+  width: 100vw;
+  height: calc(100vh - 3rem);
+  background-color: #f6f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button:focus {
+  border: 1px solid #ff9500;
+}
+
+.canvas {
+  width: 700px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls_btns {
+  margin-top: 2em;
+}
+.controls_btns button {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: #2d2d2d;
+  padding: 0.5em 0;
+  margin: 0.3em;
+  width: 5em;
+  text-align: center;
+  border-radius: 0.2em;
+  transform: scale(1);
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.controls_btns button:active {
+  transform: scale(0.98);
+}
+.controls_colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  cursor: pointer;
+}
+.controls_colors .control__color {
+  width: 3.5em;
+  height: 3.5em;
+  margin: 0.25em;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.controls_range {
+  margin-top: 2em;
+}/*# sourceMappingURL=painter.css.map */
