@@ -5,15 +5,15 @@ function Main (props){
         <div className='Main'>
             <div className="cardWrap" >
                 <div className="cardRow">
-                    <Glassy class={'tab fillUp'} text={'Fill up'} link ={'/fillup'}></Glassy>
-                    <Glassy class={'tab ripple'} text={'Ripple'} link ={'/ripple'}></Glassy>
-                    <Glassy class={'tab pathanime'} text={'Path Anime'} link ={'/pathanime'}></Glassy>
-                    <Glassy class={'tab tingle'} text={'tingle'} link ={'/tingle'}></Glassy>
+                    <Glassy class={'tab fillUp'} text={'Fill up'} link ={'/jscssmaster/fillup'}></Glassy>
+                    <Glassy class={'tab ripple'} text={'Ripple'} link ={'/jscssmaster/ripple'}></Glassy>
+                    <Glassy class={'tab pathanime'} text={'Path Anime'} link ={'/jscssmaster/pathanime'}></Glassy>
+                    <Glassy class={'tab tingle'} text={'tingle'} link ={'/jscssmaster/tingle'}></Glassy>
                 </div>
                 <div className="cardRow">
-                    <Glassy class={'tab textflow'} text={'textflow'} link ={'/textflow'}></Glassy>
-                    <Glassy class={'tab glitch'} text={'Glitch'} link ={'/glitch'}></Glassy>
-                    <Glassy class={'tab card'} text={'Card'} link ={'/canvasCard'}></Glassy>
+                    <Glassy class={'tab textflow'} text={'textflow'} link ={'/jscssmaster/textflow'}></Glassy>
+                    <Glassy class={'tab glitch'} text={'Glitch'} link ={'/jscssmaster/glitch'}></Glassy>
+                    <Glassy class={'tab card'} text={'Card'} link ={'/jscssmaster/canvasCard'}></Glassy>
                 </div>
             </div>
         </div>
