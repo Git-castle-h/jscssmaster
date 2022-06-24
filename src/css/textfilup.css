@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700;800&display=swap");
+.textfillup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  font-family: "Black Han Sans", sans-serif;
+  background-color: #2f2f2f;
+  font-size: 7em;
+  width: 100vw;
+  height: calc(100vh - 3rem);
+}
+
+.textWrap.left {
+  position: relative;
+  height: 1em;
+  cursor: pointer;
+}
+.textWrap.left .mass {
+  color: transparent;
+}
+.textWrap.left .stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  color: #2f2f2f;
+  text-shadow: -0.0125em -0.0125em 0 #fff, 0.0125em -0.0125em 0 #fff, -0.0125em 0.0125em 0 #fff, 0.0125em 0.0125em 0 #fff;
+}
+.textWrap.left .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  color: #fff;
+  display: block;
+  white-space: nowrap;
+  transition: width 0.3s ease-in;
+}
+.textWrap.left .glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: #2f2f2f;
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  display: block;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in;
+}
+.textWrap.left .glow.mask {
+  display: none;
+}
+
+.textWrap.left:hover .stroke {
+  text-shadow: 0em 0em 0 #fff, 0em 0em 0 #fff, 0em 0em 0 #fff, 0em 0em 0 #fff;
+  transition: all 0;
+  transition-delay: 0.3s;
+}
+.textWrap.left:hover .fill {
+  width: 100%;
+}
+.textWrap.left:hover .glow {
+  opacity: 1;
+}
+
+.textWrap.top {
+  position: relative;
+  height: 1em;
+  cursor: pointer;
+}
+.textWrap.top .mass {
+  color: transparent;
+}
+.textWrap.top .stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+  color: #2f2f2f;
+  text-shadow: -0.0125em -0.0125em 0 #fff, 0.0125em -0.0125em 0 #fff, -0.0125em 0.0125em 0 #fff, 0.0125em 0.0125em 0 #fff;
+}
+.textWrap.top .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  overflow: hidden;
+  color: #fff;
+  display: block;
+  white-space: nowrap;
+  transition: height 0.3s ease-in;
+}
+.textWrap.top .glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: #2f2f2f;
+  text-shadow: 0px 0px 0.0625em rgb(255, 255, 255);
+  display: block;
+  white-space: nowrap;
+  transition: all 0.3s ease-in;
+}
+.textWrap.top .glow.mask {
+  display: none;
+}
+
+.textWrap.top:hover .stroke {
+  text-shadow: 0em 0em 0 #fff, 0em 0em 0 #fff, 0em 0em 0 #fff, 0em 0em 0 #fff;
+  transition: all 0;
+  transition-delay: 0.3s;
+}
+.textWrap.top:hover .fill {
+  height: 100%;
+}
+.textWrap.top:hover .glow {
+  opacity: 1;
+}
+
+.textWrap.bottom {
+  height: 1em;
+  position: relative;
+  cursor: pointer;
+}
+.textWrap.bottom .mass {
+  color: transparent;
+}
+.textWrap.bottom .stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: #fff;
+  display: block;
+}
+.textWrap.bottom .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  color: #2f2f2f;
+  text-shadow: -0.0125em -0.0125em 0 #fff, 0.0125em -0.0125em 0 #fff, -0.0125em 0.0125em 0 #fff, 0.0125em 0.0125em 0 #fff;
+  white-space: nowrap;
+  transition: height 0.3s ease-in;
+}
+.textWrap.bottom .glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #fff;
+  text-shadow: 0px 0px 0.0625em rgb(255, 255, 255);
+  display: block;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in;
+}
+.textWrap.bottom .glow.mask {
+  opacity: 1;
+  text-shadow: 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f;
+}
+
+.textWrap.bottom:hover .fill {
+  height: 0%;
+}
+.textWrap.bottom:hover .glow.mask {
+  opacity: 0;
+}
+
+.textWrap.right {
+  height: 1em;
+  position: relative;
+  cursor: pointer;
+}
+.textWrap.right .mass {
+  color: transparent;
+}
+.textWrap.right .stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+.textWrap.right .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #2f2f2f;
+  text-shadow: -0.0125em -0.0125em 0 #fff, 0.0125em -0.0125em 0 #fff, -0.0125em 0.0125em 0 #fff, 0.0125em 0.0125em 0 #fff;
+  display: block;
+  white-space: nowrap;
+  transition: width 0.3s ease-in;
+}
+.textWrap.right .glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  color: #fff;
+  text-shadow: 0px 0px 0.0625em rgb(255, 255, 255);
+  display: block;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in;
+}
+.textWrap.right .glow.mask {
+  text-shadow: 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f, 0px 0px 0.0625em #2f2f2f;
+}
+
+.textWrap.right:hover .fill {
+  width: 0%;
+}
+.textWrap.right:hover .glow.mask {
+  opacity: 0;
+}/*# sourceMappingURL=textfilup.css.map */

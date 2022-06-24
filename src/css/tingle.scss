@@ -1,0 +1,47 @@
+.tingleWrap{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100vw;
+    height: calc( 100vh - 3rem);
+    .tingleBox{
+        width: 30em;
+        height: 30em;
+        position:relative;
+        background-color: #aaa;
+        // overflow:hidden;
+        .tingleCircle{
+            position:absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width:7em;
+            height:7em;
+            background-color: slateblue;
+            border-radius: 50%;
+            overflow: hidden;
+            .text{
+                pointer-events: none;
+                color:#000;
+                // transition: all 0.3s;
+                transform: rotate3d(0, 0, 0, 35deg);
+            }
+            .gradient{
+                position:absolute;
+                pointer-events: none;
+                // transition: all 0.3s;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%) scale(0.7);
+                width: 143%;
+                height: 143%;
+                background: radial-gradient(rgba(255,255,255,0.3) 28%, rgba(0,0,0,0.8) );
+            }
+        }
+    }
+
+}

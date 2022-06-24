@@ -1,0 +1,15 @@
+.pathanime {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.pathanime svg {
+  fill: none;
+}
+.pathanime.one {
+  background-color: #2d2d2d;
+}
+.pathanime.one svg {
+  stroke-width: 3px;
+  stroke: #fff;
+}/*# sourceMappingURL=pathanime.css.map */

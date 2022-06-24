@@ -1,0 +1,38 @@
+.MagbtnWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 3rem);
+}
+.MagbtnWrap .magBox {
+  width: 30em;
+  height: 30em;
+  position: relative;
+  background-color: #aaa;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MagbtnWrap .magCircle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 11em;
+  height: 11em;
+  background-color: aqua;
+  border-radius: 50%;
+}
+.MagbtnWrap .magCircle .text {
+  transition: transform 100ms ease-out;
+}
+.MagbtnWrap .magCircle .centerDot {
+  width: 1em;
+  height: 1em;
+  background-color: #000;
+}/*# sourceMappingURL=magbtn.css.map */
