@@ -32,15 +32,17 @@ function App() {
     <BrowserRouter>
       <Header></Header>
       <Routes>
-        <Route path ='/' element = {<Main></Main>}></Route>
-        <Route path = 'fillup' element = {<Textfillup></Textfillup>}></Route>
-        <Route path = 'ripple' element = {<Ripple></Ripple>}></Route>
-        <Route path = 'pathanime' element = {<PathAnime></PathAnime>}></Route>
-        <Route path = 'tingle' element = {<Tingle></Tingle>}></Route>
-        <Route path = 'magbtn' element = {<Magbtn></Magbtn>}></Route>
-        <Route path = 'textflow' element = {<Textflow></Textflow>}></Route>
-        <Route path = 'glitch' element = {<Glitch></Glitch>}></Route>
-        <Route path = 'painter' element = {<Painter></Painter>}></Route>
+        <Route path = 'jscssmaster'>
+          <Route path ='/' element = {<Main></Main>}></Route>
+          <Route path = 'fillup' element = {<Textfillup></Textfillup>}></Route>
+          <Route path = 'ripple' element = {<Ripple></Ripple>}></Route>
+          <Route path = 'pathanime' element = {<PathAnime></PathAnime>}></Route>
+          <Route path = 'tingle' element = {<Tingle></Tingle>}></Route>
+          <Route path = 'magbtn' element = {<Magbtn></Magbtn>}></Route>
+          <Route path = 'textflow' element = {<Textflow></Textflow>}></Route>
+          <Route path = 'glitch' element = {<Glitch></Glitch>}></Route>
+          <Route path = 'painter' element = {<Painter></Painter>}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
     </Provider>
