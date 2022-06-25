@@ -8,7 +8,7 @@ function Painter(){
             <canvas id="jsCanvas" className='canvas'></canvas>
             <div className="controls_range">
                 <input type="range" className="jsRange" id ="jsRange"  min="0.1" max="5" defaultValue="2.5" step="0.1" />
-                <span> Do we have any hope?</span>
+                <span> Do we have any hope? for real?</span>
             </div>
             <div className="controls_btns">
                 <button tabindex ='0' id="jsMode">Fill</button>
