@@ -117,7 +117,7 @@ function Painter(){
             const image = canvas.toDataURL('image/jpeg');
             const link = document.createElement('a');
             link.href =image;
-            link.download ='PainJs[EXPORT]';
+            link.download ='PainterJs[EXPORT]';
             link.click();
             console.log(link);
 
