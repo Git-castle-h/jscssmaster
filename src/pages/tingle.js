@@ -64,8 +64,8 @@ function circleDown(event){
     //  mouseY = event.nativeEvent.clientY;
      
     offset = [
-        event.target.offsetLeft - event.nativeEvent.clientX,
-        event.target.offsetTop - event.nativeEvent.clientY
+        event.target.offsetLeft - event.clientX,
+        event.target.offsetTop - event.clientY
     ];
 
     //  posX = mouseX - (centerX/2);

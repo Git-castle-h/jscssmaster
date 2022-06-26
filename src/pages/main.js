@@ -14,6 +14,7 @@ function Main (props){
                     <Glassy class={'tab textflow'} text={'textflow'} link ={'/jscssmaster/textflow'}></Glassy>
                     <Glassy class={'tab glitch'} text={'Glitch'} link ={'/jscssmaster/glitch'}></Glassy>
                     <Glassy class={'tab card'} text={'Card'} link ={'/jscssmaster/canvasCard'}></Glassy>
+                    <Glassy class={'tab painter'} text={'Painter'} link ={'/jscssmaster/painter'}></Glassy>
                 </div>
             </div>
         </div>
