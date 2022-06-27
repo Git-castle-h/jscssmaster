@@ -11,6 +11,8 @@ import './css/magbtn.css';
 import './css/textflow.css';
 import './css/glitch.css';
 import './css/painter.css';
+import './css/cursor.css';
+import './css/textanime.css';
 import {Main} from './pages/main.js';
 import {Header} from './pages/header.js';
 import {Textfillup} from './pages/textfillup.js';
@@ -23,6 +25,8 @@ import {Magbtn} from './pages/magbtn.js';
 import {Textflow} from './pages/textflow.js';
 import {Glitch} from './pages/glitch.js';
 import {Painter} from './pages/canvaspainter.js';
+import {Cursor} from './pages/cursor.js';
+import {TextAnime} from './pages/textAnime.js';
 import store from './redux/store.js';
 
 
@@ -44,6 +48,8 @@ function App() {
             <Route path = 'textflow' element = {<Textflow></Textflow>}></Route>
             <Route path = 'glitch' element = {<Glitch></Glitch>}></Route>
             <Route path = 'painter' element = {<Painter></Painter>}></Route>
+            <Route path = 'cursor' element = {<Cursor></Cursor>}></Route>
+            <Route path = 'textanime' element = {<TextAnime></TextAnime>}></Route>
           </Route>
       </Routes>
     </BrowserRouter>

@@ -5,7 +5,7 @@ function Main (props){
         <div className='Main'>
             <div className="cardWrap" >
                 <div className="cardRow">
-                    <Glassy class={'tab fillUp'} text={'Fill up'} link ={'/jscssmaster/fillup'}></Glassy>
+                    <Glassy class={'tab fillUp'} text={'Text Fillup'} link ={'/jscssmaster/fillup'}></Glassy>
                     <Glassy class={'tab ripple'} text={'Ripple'} link ={'/jscssmaster/ripple'}></Glassy>
                     <Glassy class={'tab pathanime'} text={'Path Anime'} link ={'/jscssmaster/pathanime'}></Glassy>
                     <Glassy class={'tab tingle'} text={'tingle'} link ={'/jscssmaster/tingle'}></Glassy>
@@ -14,6 +14,10 @@ function Main (props){
                     <Glassy class={'tab textflow'} text={'textflow'} link ={'/jscssmaster/textflow'}></Glassy>
                     <Glassy class={'tab glitch'} text={'Glitch'} link ={'/jscssmaster/glitch'}></Glassy>
                     <Glassy class={'tab painter'} text={'Painter'} link ={'/jscssmaster/painter'}></Glassy>
+                    <Glassy class={'tab cursor'} text={'Designed Cursor'} link ={'/jscssmaster/cursor'}></Glassy>
+                </div>
+                <div className="cardRow">
+                <Glassy class={'tab textanime'} text={'textanime'} link ={'/jscssmaster/textanime'}></Glassy>
                 </div>
             </div>
         </div>

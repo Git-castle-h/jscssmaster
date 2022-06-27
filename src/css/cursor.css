@@ -1,0 +1,77 @@
+.demoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  min-width: 1024px;
+  margin: 0 auto;
+  cursor: none;
+}
+.demoWrap .demodiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.demoWrap .demodiv1 .demoSubdiv {
+  height: 7em;
+}
+.demoWrap .demodiv1 .demoSubdiv1 {
+  width: 30%;
+  background-color: antiquewhite;
+}
+.demoWrap .demodiv1 .demoSubdiv2 {
+  width: 40%;
+  background-color: aquamarine;
+}
+.demoWrap .demodiv1 .demoSubdiv3 {
+  width: 30%;
+  background-color: beige;
+}
+.demoWrap .demodiv2 .demoSubdiv {
+  height: 15em;
+}
+.demoWrap .demodiv2 .demoSubdiv1 {
+  width: 20%;
+  background-color: slateblue;
+}
+.demoWrap .demodiv2 .demoSubdiv2 {
+  width: 80%;
+  background-color: salmon;
+}
+.demoWrap .demodiv3 .demoSubdiv {
+  height: 10em;
+}
+.demoWrap .demodiv3 .demoSubdiv1 {
+  width: 50%;
+  background-color: sandybrown;
+}
+.demoWrap .demodiv3 .demoSubdiv2 {
+  width: 25%;
+  background-color: palevioletred;
+}
+.demoWrap .demodiv3 .demoSubdiv3 {
+  width: 25%;
+  background-color: pink;
+}
+
+.customCursor {
+  width: 2em;
+  height: 2em;
+  padding: 0.75em;
+  border-radius: 50%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  background-color: rgb(0, 0, 0);
+  will-change: transform;
+  transition: transform 0.15s ease-in-out;
+}
+.customCursor .cursorText {
+  display: block;
+  font-size: 0.7em;
+  color: #fff;
+}/*# sourceMappingURL=cursor.css.map */
