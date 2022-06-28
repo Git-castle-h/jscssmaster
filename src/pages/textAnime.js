@@ -12,7 +12,7 @@ function TextAnime(){
         function textDisplay(element,i){
             const textArray = element.innerText.split('');
             if(!specialArray[i]){
-                special =['j','o','o','o','a','k','e','i','l','o','v','e','y','o','u'];
+                special =['j','o','o','j','a','k','e','i','l','o','v','e','y','o','u'];
             }else{
                 special = specialArray[i];
             }
@@ -24,7 +24,7 @@ function TextAnime(){
             let numArray = [];
             for(let ie11i =0; ie11i<textArray.length; ie11i++){
                 let i = ie11i;
-                const num = randomIntBetween(5, 40)
+                const num = randomIntBetween(5, 15);
                 numArray = [...numArray, 0];
                 numArray[i] = num;
             }
