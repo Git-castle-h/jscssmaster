@@ -18,6 +18,7 @@ function Main (props){
                 </div>
                 <div className="cardRow">
                 <Glassy class={'tab textanime'} text={'textanime'} link ={'/jscssmaster/textanime'}></Glassy>
+                <Glassy class={'tab particle'} text={'particle'} link ={'/jscssmaster/particle'}></Glassy>
                 </div>
             </div>
         </div>
