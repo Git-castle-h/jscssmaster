@@ -8,17 +8,18 @@ function Main (props){
                     <Glassy class={'tab fillUp'} text={'Text Fillup'} link ={'/jscssmaster/fillup'}></Glassy>
                     <Glassy class={'tab ripple'} text={'Ripple'} link ={'/jscssmaster/ripple'}></Glassy>
                     <Glassy class={'tab pathanime'} text={'Path Anime'} link ={'/jscssmaster/pathanime'}></Glassy>
-                    <Glassy class={'tab tingle'} text={'tingle'} link ={'/jscssmaster/tingle'}></Glassy>
+                    <Glassy class={'tab tingle'} text={'Tingle'} link ={'/jscssmaster/tingle'}></Glassy>
                 </div>
                 <div className="cardRow">
-                    <Glassy class={'tab textflow'} text={'textflow'} link ={'/jscssmaster/textflow'}></Glassy>
+                    <Glassy class={'tab textflow'} text={'Textflow'} link ={'/jscssmaster/textflow'}></Glassy>
                     <Glassy class={'tab glitch'} text={'Glitch'} link ={'/jscssmaster/glitch'}></Glassy>
                     <Glassy class={'tab painter'} text={'Painter'} link ={'/jscssmaster/painter'}></Glassy>
                     <Glassy class={'tab cursor'} text={'Designed Cursor'} link ={'/jscssmaster/cursor'}></Glassy>
                 </div>
                 <div className="cardRow">
-                <Glassy class={'tab textanime'} text={'textanime'} link ={'/jscssmaster/textanime'}></Glassy>
-                <Glassy class={'tab particle'} text={'particle'} link ={'/jscssmaster/particle'}></Glassy>
+                <Glassy class={'tab textanime'} text={'Text Animation'} link ={'/jscssmaster/textanime'}></Glassy>
+                <Glassy class={'tab particle'} text={'Particle'} link ={'/jscssmaster/particle'}></Glassy>
+                <Glassy class={'tab imagegrid'} text={'Image Grid'} link ={'/jscssmaster/imagegrid'}></Glassy>
                 </div>
             </div>
         </div>

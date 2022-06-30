@@ -1,0 +1,55 @@
+.imageGridWrap {
+  width: 100%;
+  height: calc(100vh - 3rem);
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageGridWrap .imageGridBox {
+  width: 15rem;
+  height: 20rem;
+  border: 2px solid #fff;
+}
+.imageGridWrap .imageGridBox .blindBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2d2d2d;
+}
+.imageGridWrap .imageGridBox .fragmentBox {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.imageGridWrap .imageGridBox .fragmentBox .fragment {
+  -webkit-animation-name: flip;
+          animation-name: flip;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateX(-180deg) rotateY(0);
+}
+@-webkit-keyframes flip {
+  0% {
+    transform: rotateX(-180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: rotateX(-180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}/*# sourceMappingURL=imagegrid.css.map */

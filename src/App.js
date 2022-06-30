@@ -14,6 +14,7 @@ import './css/painter.css';
 import './css/cursor.css';
 import './css/textanime.css';
 import './css/canvasparticle.css';
+import './css/imagegrid.css';
 import {Main} from './pages/main.js';
 import {Header} from './pages/header.js';
 import {Textfillup} from './pages/textfillup.js';
@@ -29,6 +30,7 @@ import {Painter} from './pages/canvaspainter.js';
 import {Cursor} from './pages/cursor.js';
 import {TextAnime} from './pages/textAnime.js';
 import {Particle} from './pages/canvasparticle.js';
+import {Imagegrid} from './pages/imagegrid.js';
 import store from './redux/store.js';
 
 
@@ -53,6 +55,7 @@ function App() {
             <Route path = 'cursor' element = {<Cursor></Cursor>}></Route>
             <Route path = 'textanime' element = {<TextAnime></TextAnime>}></Route>
             <Route path = 'particle' element = {<Particle></Particle>}></Route>
+            <Route path = 'imagegrid' element = {<Imagegrid></Imagegrid>}></Route>
           </Route>
       </Routes>
     </BrowserRouter>

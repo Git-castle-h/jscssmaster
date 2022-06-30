@@ -15,6 +15,7 @@ function Header (){
             <Link to ='/jscssmaster/cursor'><li>Cursor</li></Link>
             <Link to ='/jscssmaster/textanime'><li>TextAnime</li></Link>
             <Link to ='/jscssmaster/particle'><li>Particle</li></Link>
+            <Link to ='/jscssmaster/imagegrid'><li>ImageGrid</li></Link>
         </header>
 
     )
