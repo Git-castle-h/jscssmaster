@@ -116,65 +116,64 @@ function Imagegrid(){
                 new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'bottomRight').animate();
             }
         }
-        for(let ie11i=0; ie11i < imgGridBoxArr.length; ie11i++){
-            let i = ie11i;
-            imgGridBoxArr[i].addEventListener('click',function(e){
-                e.preventDefault();
-                console.log(imgGridBoxArr[i].classList.contains('on'));
-            if(imgGridBoxArr[i].classList.contains('on')){
-                if(click){
-                click = false;
-                imgGridBoxArr[i].classList.add('off');
-                setTimeout(function(){
-                    imgGridBoxArr[i].classList.remove('on');
-                    imgGridBoxArr[i].classList.remove('off');
-                    click = true;
-                    },2000)
-                }
-            }else{
-            if(click){
-                click = false;
-                imgGridBoxArr[i].classList.add('on');
-                setTimeout(function(){
-                click = true;
-                },1500)
-                }
-            }
-            })
-        }
+        // for(let ie11i=0; ie11i < imgGridBoxArr.length; ie11i++){
+        //     let i = ie11i;
+        //     imgGridBoxArr[i].addEventListener('click',function(e){
+        //         console.log(imgGridBoxArr[i].classList.contains('on'));
+        //     if(imgGridBoxArr[i].classList.contains('on')){
+        //         if(click){
+        //         click = false;
+        //         imgGridBoxArr[i].classList.add('off');
+        //         setTimeout(function(){
+        //             imgGridBoxArr[i].classList.remove('on');
+        //             imgGridBoxArr[i].classList.remove('off');
+        //             click = true;
+        //             },2000)
+        //         }
+        //     }else{
+        //     if(click){
+        //         click = false;
+        //         imgGridBoxArr[i].classList.add('on');
+        //         setTimeout(function(){
+        //         click = true;
+        //         },1500)
+        //         }
+        //     }
+        //     })
+        // }
     },[])
     return(
         <div className="ImageGrid">
             <div className="imageGridWrap">
-                <div className="imageGridBox top" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox top" onClick={cardFlip} style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                <div className="imageGridBox bottom" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox bottom" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                 <div className="imageGridBox left" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                 <div className="imageGridBox left" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                <div className="imageGridBox right" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox right" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                <div className="imageGridBox topLeft" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox topLeft" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                <div className="imageGridBox topRight" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox topRight" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                <div className="imageGridBox bottomLeft" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox bottomLeft" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
-                <div className="imageGridBox bottomRight" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox bottomRight" onClick={cardFlip}  style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
@@ -184,5 +183,31 @@ function Imagegrid(){
     )
 
 }
+
+let click = true;
+
+function cardFlip(evt){
+                console.log(evt.target.classList.contains('on'));
+            if(evt.target.classList.contains('on')){
+                if(click){
+                click = false;
+                evt.target.classList.add('off');
+                setTimeout(function(){
+                    evt.target.classList.remove('on');
+                    evt.target.classList.remove('off');
+                    click = true;
+                    },2000)
+                }
+            }else{
+            if(click){
+                click = false;
+                evt.target.classList.add('on');
+                setTimeout(function(){
+                click = true;
+                },1500)
+                }
+    }
+}
+
 
 export{Imagegrid};
