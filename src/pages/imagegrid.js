@@ -7,6 +7,7 @@ function Imagegrid(){
         let imgGridBoxArr = document.querySelectorAll('.imageGridBox');
         let gridX = 15;
         let gridY = 20;
+        let click = true;
 
         class GridAnimation{
             constructor(gridX, gridY ,imgGridBox , direction){
@@ -115,12 +116,37 @@ function Imagegrid(){
                 new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'bottomRight').animate();
             }
         }
-
+        for(let ie11i=0; ie11i < imgGridBoxArr.length; ie11i++){
+            let i = ie11i;
+            imgGridBoxArr[i].addEventListener('click',function(e){
+                e.preventDefault();
+                console.log(imgGridBoxArr[i].classList.contains('on'));
+            if(imgGridBoxArr[i].classList.contains('on')){
+                if(click){
+                click = false;
+                imgGridBoxArr[i].classList.add('off');
+                setTimeout(function(){
+                    imgGridBoxArr[i].classList.remove('on');
+                    imgGridBoxArr[i].classList.remove('off');
+                    click = true;
+                    },2000)
+                }
+            }else{
+            if(click){
+                click = false;
+                imgGridBoxArr[i].classList.add('on');
+                setTimeout(function(){
+                click = true;
+                },1500)
+                }
+            }
+            })
+        }
     },[])
     return(
         <div className="ImageGrid">
             <div className="imageGridWrap">
-                {/* <div className="imageGridBox top" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                <div className="imageGridBox top" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
@@ -131,7 +157,7 @@ function Imagegrid(){
                  <div className="imageGridBox left" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
-                </div> */}
+                </div>
                 <div className="imageGridBox right" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
