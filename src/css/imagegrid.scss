@@ -55,9 +55,9 @@
     }
     .imageGridBox.off{
         .fragmentBox{
-            // .fragment{
-            //     animation-name: flipBack !important;
-            // }
+            .fragment{
+                animation-name: flipBack !important;
+            }
         }
         @keyframes flipBack{
             0%{transform: rotateY(0deg);}

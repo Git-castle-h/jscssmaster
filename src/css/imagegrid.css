@@ -76,6 +76,10 @@
 .imageGridWrap .imageGridBox.on .fragmentBox {
   display: block;
 }
+.imageGridWrap .imageGridBox.off .fragmentBox .fragment {
+  -webkit-animation-name: flipBack !important;
+          animation-name: flipBack !important;
+}
 @-webkit-keyframes flipBack {
   0% {
     transform: rotateY(0deg);
