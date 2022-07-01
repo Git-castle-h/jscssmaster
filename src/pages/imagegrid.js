@@ -9,30 +9,31 @@ function Imagegrid(){
         let gridY = 20;
 
         class GridAnimation{
-            constructor(gridX, gridY ,imgGridBox){
-                this.gridX = gridX
-                this.gridY = gridY
-                this.imgGridBox = imgGridBox
+            constructor(gridX, gridY ,imgGridBox , direction){
+                this.gridX = gridX;
+                this.gridY = gridY;
+                this.imgGridBox = imgGridBox;
                 this.clientWidth = this.imgGridBox.clientWidth;
                 this.clientHeight = this.imgGridBox.clientHeight;
+                this.direction = direction;
             }
             animate(){
                 let gridWidth = this.clientWidth/this.gridX;
                 let gridHeight = this.clientHeight/this.gridY;
                 this.imgGridBox.style.backgroundSize = this.clientWidth +'px '+ this.clientHeight+'px';
-                console.log(gridWidth, gridHeight);
+                // console.log(gridWidth, gridHeight);
                 for(let ie11e=0; ie11e < this.gridX; ie11e++){
                     let e = ie11e;
                     for(let ie11i=0; ie11i < this.gridY; ie11i++){
                         let i = ie11i;
-                        new fragment(gridWidth, gridHeight, gridWidth*e, gridHeight*i, this.imgGridBox , e, i).animate();
+                        new fragment(gridWidth, gridHeight, gridWidth*e, gridHeight*i, this.imgGridBox , e, i, this.direction).animate();
                     }
                 }
             }
         }
         
         class fragment{
-            constructor(width,height,left,top,imgGridBox,e,i){
+            constructor(width,height,left,top,imgGridBox,e,i,direction){
                 this.width = width;
                 this.height =height;
                 this.left = left;
@@ -40,6 +41,7 @@ function Imagegrid(){
                 this.imgGridBox = imgGridBox;
                 this.e = e;
                 this.i = i;
+                this.direction = direction;
             }
             animate(){
                 const fragmentBox = this.imgGridBox.querySelector('.fragmentBox');
@@ -47,7 +49,6 @@ function Imagegrid(){
                 const imgUrl = this.imgGridBox.style.backgroundImage;
                 const repeat = this.imgGridBox.style.backgroundRepeat;
                 const size = this.imgGridBox.style.backgroundSize;
-                this.imgGridBox.style.position ='relative';
                 fragment.className = 'fragment';
                 fragment.style.width = this.width +'px';
                 fragment.style.height = this.height +'px';
@@ -61,13 +62,30 @@ function Imagegrid(){
 
                 let isOdd = (this.e + this.i)%2 === 0;
                 if(isOdd){
-                    fragment.style.transform = 'rotateX(-180deg)';
+                    fragment.style.animationName = "flipX";
                 }else{
-                    fragment.style.transform = 'rotateY(-180deg)';   
+                    fragment.style.animationName = "flipY";
                 }
-                
-                fragment.style.animationDelay = this.e*70+ this.i*70 + 'ms';
-                // fragment.style.border = '1px solid rgb(0,0,255)';
+                // console.log(fragment.style);                        
+
+                if(this.direction == 'bottom'){
+                fragment.style.animationDelay = (gridX - this.i)*70 +'ms';
+            }else if(this.direction == 'top'){
+                fragment.style.animationDelay = (this.i)*70 +'ms';
+            }else if(this.direction == 'left'){
+                fragment.style.animationDelay = (this.e)*70 +'ms';
+            }else if(this.direction == 'right'){
+                fragment.style.animationDelay = (gridY - this.e)*70 +'ms';
+            }else if(this.direction == 'topLeft'){
+                fragment.style.animationDelay = (this.i)*35+(this.e)*35 +'ms';
+            }else if(this.direction == 'topRight'){
+                fragment.style.animationDelay = (this.i)*35+(gridY-this.e)*35 +'ms';
+            }else if(this.direction == 'bottomLeft'){
+                fragment.style.animationDelay = (gridX-this.i)*35+(this.e)*35 +'ms';
+            }else if(this.direction == 'bottomRight'){
+                fragment.style.animationDelay = (gridX-this.i)*35+(gridY-this.e)*35 +'ms';
+            }
+
                 fragmentBox.appendChild(fragment);
             }
         }
@@ -79,18 +97,63 @@ function Imagegrid(){
 
         for(let ie11i=0; ie11i < imgGridBoxArr.length; ie11i++){
             let i = ie11i;
-            new GridAnimation(gridX, gridY, imgGridBoxArr[i]).animate();
+            if(imgGridBoxArr[i].classList.contains('bottom')){
+            new GridAnimation(gridX, gridY, imgGridBoxArr[i],'bottom').animate();
+            }else if(imgGridBoxArr[i].classList.contains('top')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i],'top').animate();
+            }else if(imgGridBoxArr[i].classList.contains('left')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'left').animate();
+            }else if(imgGridBoxArr[i].classList.contains('right')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'right').animate();
+            }else if(imgGridBoxArr[i].classList.contains('topLeft')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'topLeft').animate();
+            }else if(imgGridBoxArr[i].classList.contains('topRight')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'topRight').animate();
+            }else if(imgGridBoxArr[i].classList.contains('bottomLeft')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'bottomLeft').animate();
+            }else if(imgGridBoxArr[i].classList.contains('bottomRight')){
+                new GridAnimation(gridX, gridY, imgGridBoxArr[i], 'bottomRight').animate();
+            }
         }
 
     },[])
     return(
         <div className="ImageGrid">
             <div className="imageGridWrap">
-                <div className="imageGridBox" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                {/* <div className="imageGridBox top" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div>
+                <div className="imageGridBox bottom" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div>
+                 <div className="imageGridBox left" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div> */}
+                <div className="imageGridBox right" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div>
+                <div className="imageGridBox topLeft" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div>
+                <div className="imageGridBox topRight" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div>
+                <div className="imageGridBox bottomLeft" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
+                    <div className="blindBox"></div>
+                    <div className="fragmentBox"></div>
+                </div>
+                <div className="imageGridBox bottomRight" style={{backgroundImage : 'url(./images/tarot/tarot_back.png)'}}>
                     <div className="blindBox"></div>
                     <div className="fragmentBox"></div>
                 </div>
             </div>
+            
         </div>
     )
 
