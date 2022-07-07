@@ -94,6 +94,9 @@ function Particle(){
             }
             particles.push(new Particle(x, y, radius, velocity));
         }
+        for (let i = 0; i < TOTAL; i++) {
+        }
+
 
         // 4. 매 프레임마다 실행되는 재귀함수
         function render() {
@@ -128,9 +131,10 @@ function Particle(){
         let y = evt.clientY - canvasWrapRect.top;
         mouse.x = x;
         mouse.y = y;
-        console.log(mouse.x, mouse.y);
+        // console.log(mouse.x, mouse.y);
     }) 
             
+
             return function(){
                 cancelAnimationFrame(RAF);
             }

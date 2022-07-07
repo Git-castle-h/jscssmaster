@@ -77,11 +77,9 @@
   display: block;
 }
 .imageGridWrap .imageGridBox.off .fragmentBox .fragment {
-  -webkit-animation-name: flipBack !important;
-          animation-name: flipBack !important;
   transform: rotateX(0deg) rotateY(0deg);
 }
-@-webkit-keyframes flipBack {
+@-webkit-keyframes flipBackX {
   0% {
     transform: rotateX(0deg);
   }
@@ -89,11 +87,27 @@
     transform: rotateX(-180deg) rotateY(0deg);
   }
 }
-@keyframes flipBack {
+@keyframes flipBackX {
   0% {
     transform: rotateX(0deg);
   }
   100% {
     transform: rotateX(-180deg) rotateY(0deg);
+  }
+}
+@-webkit-keyframes flipBackY {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+}
+@keyframes flipBackY {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(-180deg);
   }
 }/*# sourceMappingURL=imagegrid.css.map */

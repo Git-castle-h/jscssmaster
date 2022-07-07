@@ -191,10 +191,21 @@ function cardFlip(evt){
             if(evt.target.classList.contains('on')){
                 if(click){
                 click = false;
+                let fragment = evt.target.querySelectorAll('.fragment');
+                for(let ie11i = 0; ie11i<fragment.length; ie11i++){
+                    let i = ie11i;
+                    let fragAnime = fragment[i].style.animationName;
+                    console.log(fragAnime);
+                    if(fragAnime =='flipX'){
+                        fragment[i].style.animationName = 'flipBackX';
+                    }else if(fragAnime =='flipY'){
+                        fragment[i].style.animationName = 'flipBackY';
+                    }
+                }
                 evt.target.classList.add('off');
                 setTimeout(function(){
                     evt.target.classList.remove('on');
-                    evt.target.classList.remove('off');
+                    evt.target.classList.remove('off');    
                     click = true;
                     },2000)
                 }
@@ -202,9 +213,21 @@ function cardFlip(evt){
             if(click){
                 click = false;
                 evt.target.classList.add('on');
+                let fragment = evt.target.querySelectorAll('.fragment');
+                for(let ie11i = 0; ie11i<fragment.length; ie11i++){
+                    let i = ie11i;
+                    let fragAnime = fragment[i].style.animationName;
+                    console.log(fragAnime);
+                    if(fragAnime =='flipBackX'){
+                        fragment[i].style.animationName = 'flipX';
+                    }else if(fragAnime =='flipBackY'){
+                        fragment[i].style.animationName = 'flipY';
+                    }
+                }
+
                 setTimeout(function(){
                 click = true;
-                },1500)
+                },2200)
                 }
     }
 }
